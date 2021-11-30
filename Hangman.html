@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Logos Sanctum - Start a Logomachy</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/hangman.css">
+    
+</head>
+<body>
+    
+    <div class = "panache">
+        <h1>
+            Logos Sanctum
+        </h1>
+    </div>
+    <div class = "main">
+        <div class = "navigation">
+            <a href="index.html">
+                <button id="ChronologicalOrder">
+                    Chronological Order of Words
+                </button>
+            </a>
+            <a href="LanguageOrder.html">
+                <button id="LanguageOrder">
+                    Language Type Order of Words
+                </button>
+            </a>
+            <a href="LogomachySelection.html">
+                <button id="Logomachy">
+                    Start a Logomachy
+                </button>
+            </a>
+        </div>
+
+        <div class="WordsOrder">
+            <h1>
+                The hangman
+            </h1>
+            <p>
+                You will have 5 tries to get the dfinition for a given word right. 
+            </p>
+            <p>
+                Once you will get 10 right answers in a row or err once, the game shall end. 
+            </p>
+            <button type="button" id="start">
+                Commence the trial
+            </button>
+            <div class = "HangmanChallenge">
+                <div class="Hangman">
+                    
+                </div>
+                
+            </div>
+            <p id="ChallengePlace">
+
+                Your word for a challenge is:
+
+                <div id="ChallengeWord">
+
+                </div>
+
+                
+            </p>
+
+            <div id="ChallengeButtons">
+                <button type="button" id="ChallengeButton1" class="optionButton">
+                    Option1
+                </button>
+                <button type="button" id="ChallengeButton2" class="optionButton">
+                    Option2
+                </button>
+                <button type="button" id="ChallengeButton3" class="optionButton">
+                    Option3
+                </button>
+                <button type="button" id="ChallengeButton4" class="optionButton">
+                    Option4
+                </button>
+            </div>
+
+            <div id="scoreContainer">
+                Your score is: <span id="score">
+                    0
+                </span>
+            </div>
+            <div id="triesContainer">
+                Tries left: <span id="tries">
+                    5
+                </span>
+            </div>
+
+
+        </div>
+
+        
+
+        
+    </div>
+
+       
+    <script src="js/Hangman.js" ></script>
+</body>
+
+</html>

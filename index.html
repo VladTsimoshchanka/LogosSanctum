@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Logos Sanctum - Chronological Order of Words</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+    <div class = "panache">
+        <h1>
+            Logos Sanctum
+        </h1>
+    </div>
+    <div class = "main">
+        <div id="overlay">
+
+        </div>
+        <div class = "navigation">
+            <a href="index.html">
+                <button id="ChronologicalOrder">
+                    Chronological Order of Words
+                </button>
+            </a>
+            <a href="LanguageOrder.html">
+                <button id="LanguageOrder">
+                    Language Type Order of Words
+                </button>
+            </a>
+            <a href="LogomachySelection.html">
+                <button id="Logomachy">
+                    Start a Logomachy
+                </button>
+            </a>
+        </div>
+
+        <div class="WordsOrder">
+            <h1>
+                Chronological Order of Words
+            </h1>
+        </div>
+
+        <div class = "WordsSection">
+            <div id="CommitLogos">
+                <button id="CommitLogosButton">
+                    Commit Logos
+                </button>
+                
+            </div>
+
+            
+
+            <div class="palceholder">
+
+            </div>
+            <div id = "WordsOrder">
+
+                <div id="WordCard">
+                    <div id="leftCard">
+                        <div id="Word">
+                            両 
+                        </div>
+                        <a id="DictionaryLink" href="https://jisho.org/search/%E4%B8%A1%20%23kanji" target="_blank">
+                            Source Link
+                        </a>
+                    </div>
+                    <div id="rightCard">
+                        <div id="Language">
+                            Language: <span id="LanguageType">
+                                Japanese
+                            </span>
+                            
+                        </div>
+                        <div id="Definition">
+                            両 【リョウ】 both (hands, parents, sides, etc.), counter for carriages (e.g. in a train), counter for vehicles, ryō, tael, 
+                            traditional unit of weight (for gold, silver and drugs), 4-5 monme, 15-19 g, ryō, pre-Meiji unit of currency, orig. the value of one
+                             ryō of gold, ryō, traditional measure of fabric, 2 tan, ryō, tael,
+                             unit of weight under the Ritsuryo system, 1/16 kin, 42-43 g, counter for suits of clothing, sets of armor, etc.
+                             <span id="deleteCard">
+                                &times;
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="palceholder">
+                
+            </div>
+            <div id="RandomWord">
+                <button id="RandomWordButton">
+                    Summon a random word
+                </button>
+                
+            </div>
+        </div>
+    </div>
+    <div id="CommitLogosMenu">
+        <div id = "CloseButton">
+            &times;
+        </div>
+        
+        <form id="Submission">
+            <div class="commitLeft">
+                The word-itself:
+                <br>
+                <input type="text" id="WordText">
+                <br>
+                The link to the source dictionary:
+                <br>
+                <input type="text" id="WordLink">
+            </div>
+            <div class="commitRight">
+                The language:
+                <br>
+                <select id="LanguageAssignment">
+                    <option>
+                        Japanese
+                    </option>
+                    <option>
+                        Add a new language
+                    </option>
+                </select>
+                <div id="AddLanguageMenu">
+                    The new language:
+                    
+                    <input type="text" id="LanguageText">
+                    <button id = "submitLanguage" type="button">
+                        Introduce this language
+                    </button>
+                    
+                </div>
+                
+                <br>
+                Fulfill the word with definitions:
+                <br>
+                <textarea rows="10" cols="100" id="WordDefinition"></textarea>
+                <br>
+                
+            </div>
+            
+            <button id = "submitButton" type="button">
+                Commit thy logos
+            </button>
+            
+        </form>
+        
+    </div>
+    
+        <a href="index.html" class="ToTheTop">
+            <button id="TopButton">
+                Top
+            </button>
+        </a>
+    <script src="js/WordsOrder.js"></script>
+</body>
+
+</html>

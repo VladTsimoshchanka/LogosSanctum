@@ -1,0 +1,1 @@
+https://css-tricks.com/adding-stroke-to-web-text/ - added stroke to the text using this page.

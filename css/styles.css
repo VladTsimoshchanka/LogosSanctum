@@ -1,0 +1,217 @@
+@font-face { font-family: font; src: url("../assets/fonts/Rosarivo-Regular.ttf"); }
+html{
+    font-family: font;
+    background-image: url(../assets/images/ScreenShot44.png);
+    background-size:100% auto;
+}
+.navigation > a > button {
+    font-family: font;
+    font-size: 1.5vw;
+}
+
+
+.panache{
+    text-align: center;
+    color: white;
+    
+}
+
+.WordsOrder{
+    font-family: font;
+    text-align: center;
+    color: white;
+    
+}
+
+.main{
+    border: solid black 2px;
+    background-color: rgb(0, 0, 0, 0.6);
+    margin: auto;
+    width: 80%;
+}
+
+.navigation{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+    grid-column-gap: 5%;
+}
+
+.WordsSection{
+    display: grid;
+    grid-template-columns: 15% 60% 15%;
+    padding: 20px;
+    grid-column-gap: 5%;
+}
+
+
+.LogomachySelection{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    padding: 2vw;
+    justify-content: center;
+    grid-column-gap: 5%;
+}
+.LogomachyButton{
+    padding: 2vw;
+    font-family: font;
+    font-size: 2vw;
+}
+
+.optionButton{
+    font-family: font;
+    font-size: 1vw;
+}
+#WordsOrder{
+    
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+#TopButton{
+    position: absolute;
+    right: 5%;
+    font-family: font;
+    font-size: 1.5vw;
+}
+
+#WordCard {
+    color: white;
+    margin: 10px;
+    background-color: rgb(0, 0, 0, 0);
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+#leftCard {
+    display: grid;
+    
+}
+
+#Word{
+    font-size: 4vw;
+}
+
+.LanguageSelection{
+    text-align: center;
+    font-family: font;
+    font-size: 1.5vw;
+}
+
+@supports(-webkit-text-stroke: 1px black){
+    #WordCard {
+        color: white;
+        -webkit-text-stroke: 1px rgb(0, 0, 0, 0.3);
+    }
+    .WordsOrder{
+        -webkit-text-stroke: 1px rgb(0, 0, 0, 0);
+    }
+    
+    
+    
+
+}
+
+#CloseButton {
+    cursor: pointer;
+    text-align: right;
+    padding-right: 2%;
+    outline: none;
+    background: none;
+    font-size: 2rem;
+    font-weight: bold;
+    
+}
+
+#deleteCard{
+    display: flex;
+    cursor: pointer;
+    justify-content: right;
+    padding-right: 2%;
+    outline: none;
+    background: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#CommitLogosMenu {
+    font-family: font;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: 200ms ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: 100;
+    background-color: rgb(194, 208, 221);
+    width: 70%;
+}
+#CommitLogosMenu.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+#AddLanguageMenu{
+    visibility: hidden;
+}
+#AddLanguageMenu.active{
+    visibility: visible;
+}
+#WordText{
+    font-size: 4vw;
+    font-family: font;
+}
+
+#Submission {
+    padding: 2%;
+    
+}
+#WordDefinition{
+    font-family: font;
+}
+
+#overlay {
+    position: fixed;
+    transition: 200ms ease-in-out;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    z-index: 1;
+    pointer-events: all;
+    opacity: 1;
+}
+
+#RandomWord{
+    position: fixed;
+    right: 12%;
+    width: 13%;
+}
+#DictionaryLink{
+    text-decoration: none;
+    font-family: font;
+    font-size: 1.5vw;
+    color: white;
+    -webkit-text-stroke: 1px rgb(0, 0, 0, 0.3);
+}
+#CommitLogos{
+    position: fixed;
+    left: 12%;
+    width: 13%;
+}
+#RandomWordButton{
+    font-family: font;
+    font-size: 1.5vw;
+    
+}
+
+#CommitLogosButton{
+    font-family: font;
+    font-size: 1.5vw;
+    
+}
