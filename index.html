@@ -19,21 +19,21 @@
 
         </div>
         <div class = "navigation">
-            <a href="index.html">
-                <button id="ChronologicalOrder">
+            
+                <button class="navButton" id="ChronologicalOrder" onclick="location.href='index.html'">
                     Chronological Order of Words
                 </button>
-            </a>
-            <a href="LanguageOrder.html">
-                <button id="LanguageOrder">
+            
+            
+                <button class="navButton" onclick="location.href='LanguageOrder.html'">
                     Language Type Order of Words
                 </button>
-            </a>
-            <a href="LogomachySelection.html">
-                <button id="Logomachy">
+           
+            
+                <button class="navButton" onclick="location.href='LogomachySelection.html'">
                     Start a Logomachy
                 </button>
-            </a>
+           
         </div>
 
         <div class="WordsOrder">
@@ -141,19 +141,22 @@
                 
             </div>
             
+            
+            
+        </form>
+        <div id="submitButtonContainer">
             <button id = "submitButton" type="button">
                 Commit thy logos
             </button>
-            
-        </form>
+         </div>
         
     </div>
     
-        <a href="index.html" class="ToTheTop">
-            <button id="TopButton">
+        
+            <button id="TopButton" class="navButton" onclick="location.href='index.html'">
                 Top
             </button>
-        </a>
+        
     <script src="js/WordsOrder.js"></script>
 </body>
 

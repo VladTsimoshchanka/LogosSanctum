@@ -144,7 +144,7 @@ html{
     border: 1px solid black;
     border-radius: 5px;
     z-index: 100;
-    background-color: rgb(194, 208, 221);
+    background-color: rgb(179, 179, 179);
     width: 70%;
 }
 #CommitLogosMenu.active {
@@ -159,16 +159,41 @@ html{
 #WordText{
     font-size: 4vw;
     font-family: font;
+    width: 100%;
 }
 
 #Submission {
     padding: 2%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 1%;
     
 }
 #WordDefinition{
     font-family: font;
+    width: 100%;
+}
+#submitButton{
+    font-family: font;
+    font-size: 2vw;
+    border-radius: 10px;
+}
+#submitButtonContainer{
+    text-align: center;
+    padding: 30px;
 }
 
+.navButton{
+    padding: 1vw;
+    font-family: font;
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 1000px) {
+    #Submission{
+        display: initial;
+    }
+}
 #overlay {
     position: fixed;
     transition: 200ms ease-in-out;
