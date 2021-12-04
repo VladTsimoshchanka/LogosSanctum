@@ -1,3 +1,5 @@
+
+//The object for the Word Cards
 function WordObject  (Word, DictLink, LangType, Definition){
     
     
@@ -9,7 +11,7 @@ function WordObject  (Word, DictLink, LangType, Definition){
 };
 var Words = [];
 
-Words.push("両");
+
 
 populate();
 
@@ -21,9 +23,28 @@ var submitButton = document.getElementById("submitButton");
 var closeButton = document.getElementById("CloseButton");
 var langSel = document.getElementById("LanguageAssignment");
 var langSubmitButton = document.getElementById("submitLanguage");
+var deleteCard = document.getElementsByClassName("deleteCard");
+var randomWord = document.getElementById("RandomWordButton");
+
+//Adding the event listeners to all of the buttons
+
+//Make all of the delete buttons interactive
+for(var i = 0; i < deleteCard.length; i++){
+    deleteCard[i].addEventListener('click', () => {
+    
+        alert("Sorry, this feature is under development, and it will be released after the development of the database server. Thank you.");
+    })
+
+}
 
 
-//Making all of the buttons responsive
+randomWord.addEventListener('click', () => {
+    
+    alert("Sorry, this feature is under development, and it will be released after the development of the database server. Thank you.");
+})
+
+
+//Adding new language 
 langSel.addEventListener('click', () => {
     
     if(langSel.value == "Add a new language"){
@@ -32,6 +53,7 @@ langSel.addEventListener('click', () => {
     openLangMenu(menu);
     }
 })
+//Adding new language 
 langSubmitButton.addEventListener('click', () => {
     
     
@@ -43,11 +65,13 @@ langSubmitButton.addEventListener('click', () => {
     closeLangMenu(menu);
     
 })
+//Open menu for new word addition
 openButton.addEventListener('click', () => {
     
     var menu = document.getElementById("CommitLogosMenu");
     openMenu(menu);
 })
+//Close the menu
 closeButton.addEventListener('click', () => {
     var menu = document.getElementById("CommitLogosMenu");
     closeMenu(menu);
@@ -58,6 +82,7 @@ closeButton.addEventListener('click', () => {
     message.value = "";
     definition.value = "";
 })
+//Submit the input and reset the menu
 submitButton.addEventListener('click', () => {
     var input = fetchWordInfo();
     saveWord(input);
@@ -109,7 +134,7 @@ function closeLangMenu(menu){
     menu.classList.remove("active");
     
 }
-
+//Function to get the information about new word
 function fetchWordInfo(){
     var Word = document.getElementById("WordText").value;
     var DictLink = document.getElementById("WordLink").value;
@@ -119,16 +144,16 @@ function fetchWordInfo(){
     return new WordObject(Word, DictLink, Lang, Def);
 }
 
-
+//save word
 function saveWord(WordObj){
     Words.push(WordObj.Word);
     localStorage.setItem(WordObj.Word, JSON.stringify(WordObj));
 }
-
+//get the word
 function loadWord(WordObj){
     return JSON.parse(localStorage.getItem(WordObj.Word));
 }
-
+//This method creates a new Word Card based on the user's input
 function createWordCard(WordObj){
 
     
@@ -166,7 +191,7 @@ function createWordCard(WordObj){
                 Def.setAttribute("id", "Definition");
                 Def.innerHTML = WordObj.Definition;
                 var DelCard = document.createElement("span");
-                DelCard.setAttribute("id", "deleteCard");
+                DelCard.setAttribute("class", "deleteCard");
                 DelCard.innerHTML = "&times";
                 Def.appendChild(DelCard);
                 rightCard.appendChild(Def);
@@ -176,12 +201,10 @@ function createWordCard(WordObj){
 
 
 }
-
+//Display the previously added words 
 function populate(){
-    var NewWord = new WordObject("Cloister", "https://www.dictionary.com/browse/cloister", "English", "a covered walk in a convent, monastery, college, or cathedral, typically with a wall on one side and a colonnade open to a quadrangle on the other. seclude or shut up in or as if in a convent or monastery."
-    );
-    saveWord(NewWord);
-    Words.push(NewWord.Word);
+    
+    
     for(x in localStorage){
         if(localStorage.getItem(x) != null){
         console.log(localStorage.getItem(x));

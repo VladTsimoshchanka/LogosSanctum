@@ -9,6 +9,7 @@
     
 </head>
 <body>
+     <!-- The header -->
     <div class = "panache">
         <h1>
             Logos Sanctum
@@ -18,6 +19,7 @@
         <div id="overlay">
 
         </div>
+        <!-- The navigation bar -->
         <div class = "navigation">
             <button class="navButton" id="ChronologicalOrder" onclick="location.href='index.html'">
                 Chronological Order of Words
@@ -33,10 +35,14 @@
                 Start a Logomachy
             </button>
         </div>
-
+        <!-- Specification of the page -->
         <div class="WordsOrder">
             <h1>
                 Language Order of Words
+            </h1>
+            <h1>
+                DISCLAIMER: the language irder of words is still under development as the progress on the server database is being made. 
+                Right now, it has the same functionality as the chronological order of words. Thank you for understanding.
             </h1>
         </div>
 
@@ -50,7 +56,7 @@
                 </select>
             </form>
         </div>
-
+         <!-- The section that is used for addition and display of words -->
         <div class = "WordsSection">
             <div id="CommitLogos">
                 <button id="CommitLogosButton">
@@ -58,46 +64,44 @@
                 </button>
                 
             </div>
-
+            <!-- Placeholder for the structure -->
             <div class="palceholder">
 
             </div>
+            <!-- The section that displays the added words -->
             <div id = "WordsOrder">
 
                 <div id="WordCard">
                     <div id="leftCard">
                         <div id="Word">
-                            両 
+                            Your committed word 
                         </div>
-                        <a id="DictionaryLink" href="https://jisho.org/search/%E4%B8%A1%20%23kanji" target="_blank">
+                        <a id="DictionaryLink" href="https://www.google.com/" target="_blank">
                             Source Link
                         </a>
                     </div>
                     <div id="rightCard">
                         <div id="Language">
-                            Language:
-                            <span id="LanguageType">
-                                Japanese
+                            Language: <span id="LanguageType">
+                                Choose a language
                             </span>
                             
                         </div>
                         <div id="Definition">
-                            両 【リョウ】 both (hands, parents, sides, etc.), counter for carriages (e.g. in a train), counter for vehicles, ryō, tael, 
-                            traditional unit of weight (for gold, silver and drugs), 4-5 monme, 15-19 g, ryō, pre-Meiji unit of currency, orig. the value of one
-                             ryō of gold, ryō, traditional measure of fabric, 2 tan, ryō, tael,
-                             unit of weight under the Ritsuryo system, 1/16 kin, 42-43 g, counter for suits of clothing, sets of armor, etc.
-                             <span id="deleteCard">
+                            The definition for your word will be displayed here.
+                             <span class="deleteCard">
                                 &times;
                             </span>
                         </div>
                     </div>
-                    
                 </div>
 
             </div>
+            <!-- Placeholder for the structure -->
             <div class="palceholder">
                 
             </div>
+            <!-- Random word button-->
             <div id="RandomWord">
                 <button id="RandomWordButton">
                     Summon a random word
@@ -106,6 +110,7 @@
             </div>
         </div>
     </div>
+    <!-- This is the menu for adding a new word. It uses an overlay, and it is also responsive to the window size of the device -->
     <div id="CommitLogosMenu">
         <div id = "CloseButton">
             &times;
@@ -157,8 +162,8 @@
         </form>
         
     </div>
-
-        <button id="TopButton" class="navButton" onclick="location.href='index.html'">
+        <!-- The top button-->
+        <button id="TopButton" class="navButton" onclick="location.href='LanguageOrder.html'">
                 Top
         </button>
     <script src="js/WordsOrder.js"></script>

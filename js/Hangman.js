@@ -1,11 +1,14 @@
+
+//The class that controlls the entire hangman game
 class Hangman {
 
     
     constructor(root){
-        
+        //Adding html from this class to it html page
         root.innerHTML = Hangman.getHMTL();
         this.tries = 5;
         this.score = 0;
+         //Getting elements
         this.startButton = document.getElementById("start");
         this.selectedWord = document.getElementById("ChallengeWord");
         this.challengePlace = document.getElementById("ChallengePlace");
@@ -16,16 +19,16 @@ class Hangman {
         this.scorePlace = document.getElementById("score");
         this.triesPlace = document.getElementById("tries");
         
-
+        //Hide the game elements until ready to play
         this.challengePlace.style.display = "none";
         this.option1.style.display = "none";
         this.option2.style.display = "none";
         this.option3.style.display = "none";
         this.option4.style.display = "none";
-
+        //Game status variable
         this.play = null;
         
-       
+       //Start and end the game
         this.startButton.addEventListener("click", () => {
             if(this.play == null){
                 this.start();
@@ -37,7 +40,7 @@ class Hangman {
     }
 
     
-
+    //Clear the text content
     refresh(){
         
         this.challengePlace.innerHTML = "";
@@ -46,11 +49,11 @@ class Hangman {
         this.option3.innerHTML = "option3";
         this.option4.innerHTML = "option4";
     }
-
+    //Start the game
     start(){
 
 
-        
+        //Make the game elements visible
         this.startButton.style.display = "none";
         this.challengePlace.style.display = "initial";
         this.selectedWord.style.display = "initial";
@@ -73,7 +76,7 @@ class Hangman {
 
         this.updateStatus();
     }
-
+    //End and reset the game
     stop(){
         this.score = 0;
         this.tries = 5;
@@ -85,9 +88,9 @@ class Hangman {
         this.option4.style.display = "none";
         this.play = null;
         this.startButton.style.display = "initial";
-        //this.updateStatus();
+        
     }
-
+    //Prepare the buttons for the game
     setButtons(){
 
         this.option1.addEventListener("click", () => {
@@ -141,7 +144,7 @@ class Hangman {
         });
         
     }
-
+    //Prepare the words to be used for the game
     arrangeChallenge(){
 
         var Words = [];
@@ -171,7 +174,7 @@ class Hangman {
     }
 
     
-
+    //Update the game status
     updateStatus(){
         if(this.score == 10){
             this.stop();
@@ -194,5 +197,5 @@ class Hangman {
         `;
     }
 }
-
+//Initialize the game
 new Hangman(document.querySelector(".Hangman"));

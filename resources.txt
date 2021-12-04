@@ -1,1 +1,7 @@
-https://css-tricks.com/adding-stroke-to-web-text/ - added stroke to the text using this page.
+https://www.youtube.com/watch?v=PIiMSMz7KzM - this video by dcode was used for the timer game.
+https://css-tricks.com/adding-stroke-to-web-text/ 
+https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link
+https://stackoverflow.com/questions/15588091/how-to-have-css-background-image-scale-with-window-size-and-device
+https://stackoverflow.com/questions/19625646/javascript-adding-an-id-attribute-to-another-created-element
+https://stackoverflow.com/questions/3138564/looping-through-localstorage-in-html5-and-javascript
+https://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage

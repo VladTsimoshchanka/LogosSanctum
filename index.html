@@ -9,15 +9,19 @@
     
 </head>
 <body>
+
+    <!-- The header -->
     <div class = "panache">
         <h1>
             Logos Sanctum
         </h1>
     </div>
     <div class = "main">
+        <!-- Overlay for the word commitment menu -->
         <div id="overlay">
 
         </div>
+        <!-- The navigation bar -->
         <div class = "navigation">
             
                 <button class="navButton" id="ChronologicalOrder" onclick="location.href='index.html'">
@@ -35,14 +39,15 @@
                 </button>
            
         </div>
-
+        <!-- Specification of the page -->
         <div class="WordsOrder">
             <h1>
                 Chronological Order of Words
             </h1>
         </div>
-
+        <!-- The section that is used for addition and display of words -->
         <div class = "WordsSection">
+            <!-- Add a new word -->
             <div id="CommitLogos">
                 <button id="CommitLogosButton">
                     Commit Logos
@@ -51,34 +56,32 @@
             </div>
 
             
-
+            <!-- Placeholder for the structure -->
             <div class="palceholder">
 
             </div>
+            <!-- The section that displays the added words -->
             <div id = "WordsOrder">
-
+                
                 <div id="WordCard">
                     <div id="leftCard">
                         <div id="Word">
-                            両 
+                            Your committed word 
                         </div>
-                        <a id="DictionaryLink" href="https://jisho.org/search/%E4%B8%A1%20%23kanji" target="_blank">
+                        <a id="DictionaryLink" href="https://www.google.com/" target="_blank">
                             Source Link
                         </a>
                     </div>
                     <div id="rightCard">
                         <div id="Language">
                             Language: <span id="LanguageType">
-                                Japanese
+                                Choose a language
                             </span>
                             
                         </div>
                         <div id="Definition">
-                            両 【リョウ】 both (hands, parents, sides, etc.), counter for carriages (e.g. in a train), counter for vehicles, ryō, tael, 
-                            traditional unit of weight (for gold, silver and drugs), 4-5 monme, 15-19 g, ryō, pre-Meiji unit of currency, orig. the value of one
-                             ryō of gold, ryō, traditional measure of fabric, 2 tan, ryō, tael,
-                             unit of weight under the Ritsuryo system, 1/16 kin, 42-43 g, counter for suits of clothing, sets of armor, etc.
-                             <span id="deleteCard">
+                            The definition for your word will be displayed here.
+                             <span class="deleteCard">
                                 &times;
                             </span>
                         </div>
@@ -86,9 +89,11 @@
                 </div>
 
             </div>
+            <!-- Placeholder for the structure -->
             <div class="palceholder">
                 
             </div>
+            <!-- Random word button-->
             <div id="RandomWord">
                 <button id="RandomWordButton">
                     Summon a random word
@@ -97,6 +102,7 @@
             </div>
         </div>
     </div>
+    <!-- This is the menu for adding a new word. It uses an overlay, and it is also responsive to the window size of the device -->
     <div id="CommitLogosMenu">
         <div id = "CloseButton">
             &times;
@@ -152,7 +158,7 @@
         
     </div>
     
-        
+        <!-- The top button-->
             <button id="TopButton" class="navButton" onclick="location.href='index.html'">
                 Top
             </button>

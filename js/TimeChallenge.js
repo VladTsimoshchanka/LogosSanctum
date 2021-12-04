@@ -1,10 +1,15 @@
+//The code below is partially based on the code by dcode on youtube: https://www.youtube.com/watch?v=PIiMSMz7KzM
+
+
+//The timer class for the entire time game
 class Timer {
 
     
     constructor(root){
-        
+        //Adding html from this class to it html page
         root.innerHTML = Timer.getHMTL();
         this.score = 0;
+        //Getting elements
         this.selectedWord = document.getElementById("ChallengeWord");
         this.challengePlace = document.getElementById("ChallengePlace");
         this.option1 = document.getElementById("ChallengeButton1");
@@ -13,15 +18,16 @@ class Timer {
         this.option4 = document.getElementById("ChallengeButton4");
         this.scorePlace = document.getElementById("score");
         this.wrong = false;
+        //Getting the elements
         this.el = {
             minutes : root.querySelector(".timer__part--minutes"),
             seconds : root.querySelector(".timer__part--seconds"),
             start : root.querySelector(".timer__button"),
         };
-
+        //The game control variable
         this.interval = null;
         this.remainingSeconds = 10;
-       
+       //Start and end the game
         this.el.start.addEventListener("click", () => {
             if(this.interval == null){
                 this.start();
@@ -33,7 +39,7 @@ class Timer {
     }
 
     
-
+    //Start the game with all initial values
     start(){
 
         this.score = 0;
@@ -48,6 +54,7 @@ class Timer {
         if(this.remainingSeconds == 0){
             return;
         }
+        //Set the time interval for the game
         this.interval = setInterval(() => {
             this.remainingSeconds--;
             this.updateTime();
@@ -58,15 +65,15 @@ class Timer {
 
         this.updateStatus();
     }
-
+    //End the game
     stop(){
         
         clearInterval(this.interval);
         this.interval = null;
         this.updateStatus();
-        //alert("Game over. Let's see the score.");
+        
     }
-
+    //Assigning the game buttons and making them interact with the code
     setButtons(){
 
         this.option1.addEventListener("click", () => {
@@ -116,7 +123,7 @@ class Timer {
         });
         
     }
-
+    //Prepare the words for the game and assign them to buttons
     arrangeChallenge(){
 
         var Words = [];
@@ -144,7 +151,7 @@ class Timer {
         
         //selectedWord.innerHTML = localStorage.getItem();
     }
-
+    //Update the time
     updateTime(){
         const minutes = Math.floor(this.remainingSeconds / 60);
         const seconds = this.remainingSeconds % 60;
@@ -153,7 +160,7 @@ class Timer {
         this.el.seconds.textContent = seconds.toString().padStart(2, "0");
 
     }
-
+    //Status update that checks the state of the game and changes html of certain elements
     updateStatus(){
         if(this.score == 10){
             this.stop();
@@ -163,7 +170,7 @@ class Timer {
             this.el.start.innerHTML = `<img src="assets/images/outline_play_arrow_black_24dp.png">`;
             this.el.start.classList.add("timer__button--start");
             this.el.start.classList.remove("timer__button--stop");
-            //alert("Game over. Let's see the score.");
+            
             
             
         }
@@ -176,13 +183,13 @@ class Timer {
         }
         if(this.wrong == true){
             this.wrong = false;
-            //this.challengePlace.innerHTML = "Game over. Let's see the score.";
+            
             alert("Game over. Let's see the score.");
         }
         
         this.scorePlace.innerHTML = this.score.toString();
     }
-
+    //This function sends the html content that will be displayed
     static getHMTL(){
         return `
                 <span class="timer__part timer__part--minutes">00</span>
@@ -195,4 +202,5 @@ class Timer {
     }
 }
 
+//Initialize the game
 new Timer(document.querySelector(".timer"));
